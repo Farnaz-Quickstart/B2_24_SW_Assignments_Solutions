@@ -6,11 +6,9 @@
   <title>Array</title>
   <script>
     function clickHandler (event) {
-      console.log (event)
-      console.log (event.target)
-      console.log (event.src)
-      newElement =  document.getElementById("animalInput").value;
       event.preventDefault(); // Prevent the form submission and page refresh
+      console.log (event)
+      newElement =  document.getElementById("animalInput").value; 
       document.getElementById("animalElement").innerHTML += `<li>${newElement}</li>`
     }
   </script>  
