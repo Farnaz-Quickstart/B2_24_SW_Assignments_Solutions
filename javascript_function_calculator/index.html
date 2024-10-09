@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="./index.js" defer></script>
-  <title>Calculator</title>
 </head>
 
 <body>
   <header></header>
-  <main class="p-5 m-5">
-    <form action="./index.html" method="get">
-      <section>
-        <label class="col-form-label">Number 1</label>      
-        <input type="text" id="inputNumber1" class="form-control" value="1">    
-        <label class="col-form-label">Number 2</label> 
-        <input type="text" id="inputNumber2" class="form-control" value="2">  
-        <input type="text" id="inputResult" class="form-control" placeholder="result">
-      </section>
-            
+  <main>
+    <form action="index.html" method="get">
+      <label>Number1
+        <input type="text" name="number1" id="number1" value="10">
+      </label>
+
+      <label>Number2
+        <input type="text" name="number2" id="number2" value="5">
+      </label>
+
+      <label for="">
+        result
+        <input type="text" name="result" id="result">
+      </label>
+
       <section>
         <button type="button" class="btn btn-primary" onclick="handleAddition()">+</button>
         <button type="button" class="btn btn-secondary" onclick="handleSubtraction()">-</button>
         <button type="button" class="btn btn-success" onclick="handleMultipication()">*</button>
         <button type="button" class="btn btn-danger" onclick="handleDivision()">/</button>
       </section>
-  
     </form>
   </main>
+
   <footer></footer>
 </body>
 </html>
