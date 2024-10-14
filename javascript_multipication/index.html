@@ -3,18 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multipication table</title>
-  <script src="./index.js"></script>
+  <title>Multipication Table</title>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-  <form method="get" action="">
-    <label for="">
-      Number: 
-    </label>
-    <input type="number" name="input_number" id="input_number" value="6">
-    <button type="button" onclick="generateTable()">Multipication Generator</button>
-    <p id="input_result"></p>
-  </form>
+  <header></header>
+  <main>
+    <form action="">
+      <label for="">
+        Number:
+        <input type="text" name="input_number" id="input_number">
+      </label><br>
+      <input type="text" name="" id="result1" placeholder="result1"><br>
+      <input type="text" name="" id="result2" placeholder="result2">
+      <p id="result">
+        Result
+       
+      </p>
+     <button type="button" onclick="generateMultipication()">Generate Multipication Table</button>
+    </form>
+  </main>
 </body>
 </html>
