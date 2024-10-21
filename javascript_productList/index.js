@@ -16,24 +16,19 @@ let products = [
   image: "headphones.jpg" }
 ];
 
-for (i = 0 ; i < products.length; i++ ) {
+for (let i = 0 ; i<products.length; i++) {
   let productItem = products[i]
 
-  let productSection = document.getElementById ("productList")
-
-  let productDiv = document.createElement ("div")
-  let productImage = document.createElement ("img")
   let productName = document.createElement ("h2")
-  let productDesc = document.createElement ("p")
-
   productName.textContent = productItem.name
-  productImage.src = `./images/${productItem.image}`
-  productDesc.textContent = productItem.description
+  let productDescription = document.createElement ("p")
+  productDescription.textContent = productItem.description
+  let productImage = document.createElement ("img")
+  productImage.src = `images/${productItem.image}`
 
-  productDiv.appendChild (productName)
-  productDiv.appendChild (productDesc)
-  productDiv.appendChild (productImage)
-
-  productSection.appendChild (productDiv)
-
+  let sectionProduct = document.getElementById("productList")
+  sectionProduct.appendChild (productName)
+  sectionProduct.appendChild (productDescription)
+  sectionProduct.appendChild (productImage)
 }
+
