@@ -1,56 +1,39 @@
-// Function to display the products on the webpage
-// Array of product objects
 let products = [
   {
-    name: "Laptop",
-    price: 999.99,
-    description: "A high-performance laptop for work and gaming.",
-    image: "laptop.jpg"
-  },
+  name: "Laptop",
+  price: 999.99,
+  description: "A high-performance laptop for work and gaming.",
+  image: "laptop.jpg" },
   {
-    name: "Smartphone",
-    price: 499.99,
-    description: "A smartphone with a great camera and fast processor.",
-    image: "smartphone.jpg"
-  },
+  name: "Smartphone",
+  price: 499.99,
+  description: "A smartphone with a great camera and fast processor.",
+  image: "smartphone.jpg" },
   {
-    name: "Headphones",
-    price: 149.99,
-    description: "Noise-cancelling headphones for immersive sound.",
-    image: "headphones.jpg"
-  }
+  name: "Headphones",
+  price: 149.99,
+  description: "Noise-cancelling headphones for immersive sound.",
+  image: "headphones.jpg" }
 ];
 
+for (i = 0 ; i < products.length; i++ ) {
+  let productItem = products[i]
 
-function displayProducts() {
-  let productContainer = document.getElementById("productContainer");
+  let productSection = document.getElementById ("productList")
 
-  // Clear previous content
-  productContainer.innerHTML = "";
+  let productDiv = document.createElement ("div")
+  let productImage = document.createElement ("img")
+  let productName = document.createElement ("h2")
+  let productDesc = document.createElement ("p")
 
-  // Loop through each product in the array
-  products.forEach(product => {
-    // Create elements for product display
-    let productDiv = document.createElement("div");
-    let productName = document.createElement("h2");
-    let productPrice = document.createElement("p");
-    let productDescription = document.createElement("p");
-    let productImage = document.createElement("img");
+  productName.textContent = productItem.name
+  productImage.src = `./images/${productItem.image}`
+  productDesc.textContent = productItem.description
 
-    // Set content and attributes
-    productName.textContent = product.name;
-    productPrice.textContent = `Price: $${product.price}`;
-    productDescription.textContent = product.description;
-    productImage.src = product.image;
-    productImage.alt = product.name;
+  productDiv.appendChild (productName)
+  productDiv.appendChild (productDesc)
+  productDiv.appendChild (productImage)
 
-    // Append to the product div
-    productDiv.appendChild(productName);
-    productDiv.appendChild(productPrice);
-    productDiv.appendChild(productDescription);
-    productDiv.appendChild(productImage);
+  productSection.appendChild (productDiv)
 
-    // Append product div to the container
-    productContainer.appendChild(productDiv);
-  });
 }
