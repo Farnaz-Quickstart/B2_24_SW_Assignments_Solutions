@@ -16,19 +16,39 @@ let products = [
   image: "headphones.jpg" }
 ];
 
-for (let i = 0 ; i<products.length; i++) {
-  let productItem = products[i]
 
+for (i = 0; i< products.length; i++) {
+
+  let productItem = products[i]
   let productName = document.createElement ("h2")
   productName.textContent = productItem.name
+
   let productDescription = document.createElement ("p")
   productDescription.textContent = productItem.description
-  let productImage = document.createElement ("img")
-  productImage.src = `images/${productItem.image}`
+   
 
-  let sectionProduct = document.getElementById("productList")
-  sectionProduct.appendChild (productName)
-  sectionProduct.appendChild (productDescription)
-  sectionProduct.appendChild (productImage)
+
+
+  let  productSection = document.getElementById ("productList")
+  productSection.appendChild (productName)
+  productSection.appendChild (productDescription)
 }
+
+
+
+// for (let i = 0 ; i<products.length; i++) {
+//   let productItem = products[i]
+
+//   let productName = document.createElement ("h2")
+//   productName.textContent = productItem.name
+//   let productDescription = document.createElement ("p")
+//   productDescription.textContent = productItem.description
+//   let productImage = document.createElement ("img")
+//   productImage.src = `images/${productItem.image}`
+
+//   let sectionProduct = document.getElementById("productList")
+//   sectionProduct.appendChild (productName)
+//   sectionProduct.appendChild (productDescription)
+//   sectionProduct.appendChild (productImage)
+// }
 

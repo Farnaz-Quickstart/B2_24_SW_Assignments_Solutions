@@ -4,7 +4,7 @@ function handleAddition () {
  
   let number1 = Number(document.getElementById("number1").value)
   let number2 = Number(document.getElementById("number2").value)
-  document.getElementById("result").value = number1 + number2
+  document.getElementById("result").value = "hello"
 
 }
 
