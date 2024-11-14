@@ -11,11 +11,10 @@ class Book {
   }
 }
 
-let book1 = new Book("book1", "farnaz", "genre sample", 2024)
+let mybook = new Book("title1", "author1", "genre1", "2003")
+
+console.log (mybook.title)
+console.log (mybook.author)
+console.log (mybook.getSummary())
 
 
- for (let key in book1) {
-  console.log (`${key}: ${book1[key]}`)
- }
-
- console.log (book1.getSummary())
